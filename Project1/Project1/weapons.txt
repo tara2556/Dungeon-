@@ -1,0 +1,42 @@
+Excalibur - a legendary sword of King Arthur with a powerful enchantment and a blade that can cut through almost anything.
+Masamune - a Japanese katana sword with a blade crafted by a famous swordsmith, known for its sharpness and beauty.
+Deathbringer - a menacing, heavy axe that strikes fear into the hearts of enemies and delivers devastating blows.
+Thunderbolt - a magical bow that shoots arrows imbued with lightning, dealing massive damage to foes.
+Frostbite - a sharp, icy dagger that freezes enemies upon contact, slowing them down and making them vulnerable.
+Dragonfire - a fiery sword that deals extra damage to dragons and other fire-based enemies.
+Bloodlust - a cursed mace that drains the life force of foes upon impact, healing the wielder and causing fear.
+Shadowstrike - a sleek, black dagger that can pierce through armor and invisibly strike from the shadows.
+Soulstealer - a cursed scythe that drains the soul of anyone it touches, granting the wielder immense power.
+Doomhammer - a massive, two-handed hammer that creates shockwaves upon impact, stunning foes and breaking through barriers.
+Widowmaker - a crossbow with a long range and incredible accuracy, capable of piercing through multiple enemies in a single shot.
+Bloodletter - a serrated sword with jagged edges that causes bleeding wounds, making it difficult for enemies to fight back.
+Vortex Cannon - a wand that unleashes a whirlwind of energy, sucking enemies towards the wielder and dealing damage over time.
+Blackout - a set of twin daggers that can steal the senses of enemies, blinding them and rendering them vulnerable to attacks.
+Oblivion - a legendary greatsword with an otherworldly aura, capable of unleashing a devastating wave of energy that destroys everything in its path.
+Shadowfang - a katana sword that glows with an eerie blue light, dealing extra damage to undead and shadow-based enemies.
+hunderstrike - a warhammer that crackles with electricity, stunning enemies and dealing extra damage to metal armor.
+Bloodmoon - a cursed dagger that only reveals its true power during a full moon, draining the life force of its victims.
+Frostbite - a magical bow that fires icy arrows, slowing enemies and freezing them solid.
+Deathstalker - a venomous longsword that poisons enemies with each strike, weakening them over time.
+Hellfire - a flamethrower that spews a torrent of flames, burning enemies and setting them ablaze.
+Ashbringer - a legendary sword that was forged to destroy undead and demonic creatures, dealing extra damage to them.
+Holy Avenger - a blessed sword that radiates divine energy, smiting evil creatures and dealing extra damage to undead.
+Cyclone Blade - a spinning blade that creates a vortex of wind, pulling enemies in and dealing damage over time.
+Darkin Scythe - a wicked scythe that is said to be cursed by a dark deity, draining the life force of its wielder in exchange for power.
+Earthshaker - a mace that creates shockwaves upon impact, stunning enemies and breaking through barriers.
+Ebonblade - a dark sword that absorbs the life force of its enemies, healing its wielder with each strike.
+Excalibur - a legendary sword that was said to be wielded by King Arthur, dealing extra damage to evil and undead creatures.
+Fury of the Storm - a set of enchanted daggers that create bolts of lightning, shocking enemies and dealing extra damage to metal armor.
+Glaive of the Void - a spear that emits a gravitational pull, pulling enemies towards the wielder and dealing extra damage to void creatures.
+Heartseeker - a magical crossbow that homes in on the target's heart, dealing extra damage and causing bleeding wounds.
+Hunter's Mark - a bow that marks enemies, revealing their position and dealing extra damage to them.
+Inferno Blade - a sword that is imbued with the power of fire, dealing extra damage to enemies weak against flames.
+Judgment - a legendary mace that is said to have been wielded by a divine being, dealing extra damage to evil and undead creatures.
+Kusarigama - a sickle-and-chain weapon that can trip and disarm enemies, allowing for swift and deadly attacks.
+Leviathan - a harpoon that was crafted to slay sea monsters, dealing extra damage to aquatic creatures.
+Mjolnir - a warhammer that was wielded by the Norse god Thor, dealing extra damage to enemies weak against lightning.
+Moonblade - a sword that glows with a silvery light, dealing extra damage during a full moon and to undead creatures.
+Nemesis Whip - a whip that is said to have been cursed by a vengeful deity, dealing extra damage to enemies that have harmed the wielder.
+Nightfall - a set of throwing knives that are coated in a paralyzing venom, immobilizing enemies and allowing for swift kills.
+Phoenix Bow - a bow that is imbued with the power of fire, dealing extra damage and igniting enemies.
+Quicksilver - a set of throwing knives that can be coated in a magical liquid, allowing for swift and deadly kills.
