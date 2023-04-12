@@ -41,7 +41,6 @@ bool Monster::triggerEvent(Object* object) {
 		int isAttack = 0;
 		int w = rand() % 5;
 		if (!w) this->chooseMonsterSkill(player);
-		player->getSkill()->recoverState(this);
 		cout << "you:\n" << *player << "rival:\n" << *this;
 		cout << "0. attack\n"
 			<< "1. defense\n"
@@ -49,8 +48,9 @@ bool Monster::triggerEvent(Object* object) {
 			<< "3. flee\n";
 		cin >> isAttack;
 		if (isAttack == 1) {
-			player->getSkill()->recoverState(player);
 			int damage = this->getAttack() - player->getAttack() - player->getDefense();
+			player->getSkill()->recoverState(player);
+			player->getSkill()->recoverState(this);
 			damage = (damage < 0) ? 0 : damage;
 			cout << "You received " << damage << " damage.\n";
 			player->takeDamage(damage);
@@ -60,9 +60,10 @@ bool Monster::triggerEvent(Object* object) {
 			}
 		}
 		else if (isAttack == 0) {
-			player->getSkill()->recoverState(player);
 			int damage = this->getAttack() - player->getDefense();
 			int harm = player->getAttack() - this->getDefense();
+			player->getSkill()->recoverState(player);
+			player->getSkill()->recoverState(this);
 			harm = (harm < 0) ? 0 : harm;
 			damage = (damage < 0) ? 0 : damage;
 			cout << "You dealt " << harm << " damage\n";
@@ -86,10 +87,10 @@ bool Monster::triggerEvent(Object* object) {
 			}
 		}
 		else if (isAttack == 2) {
-			player->getSkill()->recoverState(player);
 			player->useSkill();
 			int damage = this->getAttack() - player->getAttack();
 			damage = (damage < 0) ? 0 : damage;
+			player->getSkill()->recoverState(this);
 			cout << "You received " << damage << " damage.\n";
 			player->takeDamage(damage);
 			if (player->checkIsDead()) {

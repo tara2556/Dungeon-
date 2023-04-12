@@ -26,7 +26,7 @@ void Dungeon::createPlayer() {
 	string name;
 	int occupation;
 	cout << "May I ask for your name, adventurer?\nEnter your name: ";
-	cin >> name;
+	getline(cin, name);
 	player.setName(name);
 	cout << "What's your Occupation " << name << "?\n";
 	cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
@@ -34,7 +34,21 @@ void Dungeon::createPlayer() {
 		<< "2. Knight\n"
 		<< "3. Monk\n"
 		<< "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
-	cin >> occupation;
+	char temp;
+	cin >> temp;
+	temp -= '0';
+	while (temp <= 0 || temp > 3) {
+		cout << "No this action!\n";
+		cout << "What's your Occupation " << name << "?\n";
+		cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+			<< "1. Warrior\n"
+			<< "2. Knight\n"
+			<< "3. Monk\n"
+			<< "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+		cin >> temp;
+		temp -= '0';
+	}
+	occupation = temp;	
 	player.setOccupation(occupation);
 	vector<Item> inventory;
 	player.setInventory(inventory);
@@ -168,7 +182,7 @@ void Dungeon::createMap() {
 
 			}
 			if (monsterIsExist) {
-				needObj.push_back(&monsters[i+rand()%3]);
+				needObj.push_back(&monsters[i + rand() % 3]);
 			}
 			if (!treasureIsNotExist) {
 				int treasurePos = rand() % items.size();
@@ -311,7 +325,14 @@ bool Dungeon::handleEvent(Object* room, int type, Room* currentRoom) {
 		cout << "Are you sure you want to talk with " << room->getName() << "?\n"
 			<< "0.NO\n"
 			<< "1.Yes\n";
-		cin >> determine;
+		char temp;
+		cin >> temp;
+		temp -= '0';
+		if (temp >= 0 && temp <= 1) determine = temp;
+		else {
+			cout << "No this action!\n";
+			return 0;
+		}
 		if (!determine) {
 			return determine;
 		}
@@ -322,7 +343,14 @@ bool Dungeon::handleEvent(Object* room, int type, Room* currentRoom) {
 		cout << "Are you sure you want to attack " << room->getName() << "?\n"
 			<< "0.NO\n"
 			<< "1.Yes\n";
-		cin >> determine;
+		char temp;
+		cin >> temp;
+		temp -= '0';
+		if (temp >= 0 && temp <= 1) determine = temp;
+		else {
+			cout << "No this action!\n";
+			return 0;
+		}
 		if (!determine) {
 			return determine;
 		}
@@ -336,7 +364,14 @@ bool Dungeon::handleEvent(Object* room, int type, Room* currentRoom) {
 		cout << "Do you want to open this mysterious bag?\n"
 			<< "0.NO\n"
 			<< "1.Yes\n";
-		cin >> determine;
+		char temp;
+		cin >> temp;
+		temp -= '0';
+		if (temp >= 0 && temp <= 1) determine = temp;
+		else {
+			cout << "No this action!\n";
+			return 0;
+		}
 		if (!determine) {
 			return determine;
 		}
@@ -348,13 +383,21 @@ bool Dungeon::handleEvent(Object* room, int type, Room* currentRoom) {
 		cout << "You really want to challenge me? little coward?\n"
 			<< "0.NO\n"
 			<< "1.Yes\n";
-		cin >> determine;
+		char temp;
+		cin >> temp;
+		temp -= '0';
+		if (temp >= 0 && temp <= 1) determine = temp;
+		else {
+			cout << "No this action!\n";
+			return 0;
+		}
 		if (!determine) {
 			cout << "haha! you dumbass\n";
 			return determine;
 		}
 		Boss* boss = dynamic_cast<Boss*>(room);
 		if (boss->triggerEvent(&player)) this->finishGame = 1;
+		else return 0;
 		currentRoom->popObject(boss);
 	}
 	return 1;
@@ -581,7 +624,14 @@ void Dungeon::chooseAction(vector<Object*> room) {
 	cout << existRoom.size() + room.size() << ". check my status\n";
 	cout << existRoom.size() + room.size() + 1 << ". check the map\n";
 	cout << "which one you want to do?\n";
-	cin >> this->choosenAction;
+	char temp;
+	cin >> temp;
+	temp -= '0';
+	if (temp >= 0 && temp <= 9) this->choosenAction = temp;
+	else {
+		cout << "No this action!\n";
+		return;
+	}
 	if (this->choosenAction < 0 || this->choosenAction > existRoom.size() + room.size() + 1) {
 		cout << "No this action!\n";
 		return;

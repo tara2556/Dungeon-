@@ -39,7 +39,14 @@ bool NPC::triggerEvent(Object* object) {
 			<< "These might be just what you're looking for. Would you like to take a look?\n"
 			<< "0. No\n"
 			<< "1. Yes, I need.\n";
-		cin >> wantToBuy;
+		char temp;
+		cin >> temp;
+		temp -= '0';
+		if (temp >= 0 && temp <= 1) wantToBuy = temp;
+		else {
+			cout << "No this action!\n";
+			return 0;
+		}
 		if (wantToBuy) {
 			bool moreThanOne = 1;
 			bool checkEnoughMoney = 0;
@@ -90,6 +97,15 @@ bool NPC::triggerEvent(Object* object) {
 					cout << "Do you want to choose another?\n"
 						<< "0. No\n"
 						<< "1. Yes, I need.\n";
+					char temp;
+					cin >> temp;
+					temp -= '0';
+					if (temp >= 0 && temp <= 1) moreThanOne = temp;
+					else {
+						cout << "No this action!\n";
+						return 0;
+					}
+
 					cin >> moreThanOne;
 				}
 				
